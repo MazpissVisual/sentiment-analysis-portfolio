@@ -63,7 +63,7 @@ def preprocess(text, stopword_remover, stemmer):
     return text
 
 
-st.title("💬 Sentiment Analysis Dashboard — Bahasa Indonesia")
+st.title("Sentiment Analysis Dashboard — Bahasa Indonesia")
 st.caption("Rumah Digicraft — Data Science Portfolio Project | Dataset: IndoNLU SmSA")
 
 data_path = st.sidebar.text_input(
@@ -79,7 +79,7 @@ except FileNotFoundError:
 model, tfidf = train_model(df)
 stopword_remover, stemmer = get_preprocessor()
 
-tab1, tab2, tab3 = st.tabs(["📈 Overview Dataset", "🔎 Kata Kunci per Sentimen", "🎯 Coba Prediksi"])
+tab1, tab2, tab3 = st.tabs(["Overview Dataset", "Kata Kunci per Sentimen", "Coba Prediksi"])
 
 with tab1:
     col1, col2, col3 = st.columns(3)
